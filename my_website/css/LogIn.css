@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    padding: 20px 50px;
+}
+
+/* Background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background.png') center/cover no-repeat fixed;
+    filter: blur(5px) brightness(50%);
+    z-index: -1;
+}
+
+/* Main container */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    gap: 50px;
+}
+
+/* Left side: Logo + intro */
+.introduction_section {
+    width: 500px;
+    color: white;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo_image {
+    width: 80px;
+    border-radius: 15px;
+}
+
+.title h1 {
+    font-size: clamp(1.5rem, 5vw, 60px);
+    background: linear-gradient(to right, white, #00b4d8, #0077b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub_header {
+    margin-top: 15px;
+    font-size: clamp(14px, 1.8vw, 22px);
+}
+
+/* Right side: Login box */
+.login_section {
+    width: 380px;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+}
+
+.login_title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.login_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login_form label {
+    font-size: 14px;
+}
+
+/* Input fields */
+.textbox {
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Login button */
+.login_button {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    background: #58AAE4;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login_button:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+/* Register link */
+.register_link {
+    margin-top: 10px;
+    color: #58AAE4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.register_link:hover {
+    transform: scale(1.05);
+}
+
+.login_links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login_link_button {
+    display: block;
+    text-align: center;
+    background-color: #5bc0de;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login_link_button:hover {
+    background-color: #31b0d5;
+}

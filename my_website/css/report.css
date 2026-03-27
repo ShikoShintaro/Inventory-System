@@ -1,0 +1,117 @@
+/* === Two-column flex layout === */
+.dashboard_content {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+.left_table {
+    flex: 2;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.right_form {
+    flex: 1;
+    min-width: 350px;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Table styles */
+.delivery_table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.delivery_table th,
+.delivery_table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.status.pending {
+    color: yellow;
+    font-weight: bold;
+}
+
+.status.in-transit {
+    color: #00b4d8;
+    font-weight: bold;
+}
+
+.status.delivered {
+    color: #00ff9d;
+    font-weight: bold;
+}
+
+.status.delayed {
+    color: #ff4f4f;
+    font-weight: bold;
+}
+
+/* Form styles */
+.right_form h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, white, #00b4d8, #0077b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.right_form .textbox,
+.right_form select {
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.right_form .login_button {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    background: #58AAE4;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.right_form .login_button:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+.response_message {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.response_message {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.response_message.success {
+    color: limegreen;
+}
+
+.response_message.error {
+    color: red;
+}
